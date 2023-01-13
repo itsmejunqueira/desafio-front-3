@@ -1,0 +1,42 @@
+.login-place {
+    background: #270F44 0% 0% no-repeat padding-box;
+    width     : 100vw;
+    height    : 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width        : 1150px;
+        height       : 673px;
+        background   : #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow   : 60px 60px 99px #00000045;
+        border-radius: 47px;
+    }
+
+    .side-login {
+        width        : 578px;
+        height       : 100%;
+       
+        .logo-holder{
+        padding-top: 37px;
+        padding-left: 37px;
+        }
+
+        .main-section{
+          height: 581px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+
+    .side-img{
+        width: 572px;
+        height: 599px;
+        border-radius: 29px;
+    }
+}
