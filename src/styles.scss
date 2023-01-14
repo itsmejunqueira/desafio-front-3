@@ -1,5 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'ngx-toastr/toastr';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "./assets/scss/breakpoints.scss";
+
+
+*{
+  font-family: Poppins; 
+}
+
 html,body{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.spinner {
+    margin-top: 60px;
+    color: #fff;
+   font-size: 13px;
+}
+
+/* Custom checkbox */
+.check-holder {
+  display            : block;
+  position           : relative;
+  padding-left       : 27px;  
+  margin-bottom      : 12px;
+  cursor             : pointer;
+  text-align         : left;
+  letter-spacing     : 0px;
+  color              : #626262;
+  input {
+      position: absolute;
+      opacity : 0;
+      cursor  : pointer;
+      height  : 0;
+      width   : 0;
+  }
+
+  .checkmark {
+      position        : absolute;
+      top             : 0;
+      left            : 0;
+      height          : 19px;
+      width           : 19px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #CCCCCC;
+      border-radius: 5px;
+  }
+  
+  .check-holder:hover input~.checkmark {
+      background-color: #ccc;
+  }
+  input:checked~.checkmark {
+      background: black 0% 0% no-repeat padding-box;
+  }
+  .checkmark:after {
+      content : "";
+      position: absolute;
+      display : none;
+  }
+  input:checked~.checkmark:after {
+      display: block;
+  }
+  .checkmark:after {
+      left             : 6px;
+      top              : 3px;
+      width            : 5px;
+      height           : 10px;
+      border           : solid white;
+      border-width     : 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform    : rotate(45deg);
+      transform        : rotate(45deg);
+  }
 }

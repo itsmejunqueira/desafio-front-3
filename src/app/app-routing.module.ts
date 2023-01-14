@@ -13,11 +13,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('./auth/auth.module').then((m) => m.AuthModule),
   },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+    canActivate: [],
+  },
   // {
-  //   path: 'dashboard',
+  //   path: 'navigation',
   //   loadChildren: () =>
-  //     import('./dashboard-sales/dashboard.module').then(
-  //       (m) => m.DashboardModule
+  //     import('./navigation/navigation.module').then(
+  //       (m) => m.NavigationModule
   //     ),
   //   canActivate: [],
   // },
