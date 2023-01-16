@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-auth',
@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
+  isMobile = true;
 
+
+
+ngOnInit(): void {
+  this.onResize();
+}
+@HostListener("window:resize", ["$event"])
+  public onResize(evt?: any): void {
+      if (window.innerWidth < 480) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+   } 
 }

@@ -1,5 +1,10 @@
+@import "../../../assets/scss/breakpoints.scss";
 form {
     width: 384px;
+    
+        @include for-phone-only {
+            width: 300px;
+        }
 }
 
 .img-login {
