@@ -1,24 +1,166 @@
-// .session-nav{
-//     width: 1920px;
-//     height: 355px;
-//     background: #121925 0% 0% no-repeat padding-box;
-//     box-shadow: 0px 2px 4px #0000001F;
+@import "../../assets/scss/breakpoints.scss";
+.session-nav {
+    margin-right: 30px;
 
-//     .header-menu{
-//         display: flex;
-//         justify-content:space-between;
-//         align-items:center;
+    .header-menu {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
 
-//         .menu-drop{
+        .menu-drop {
+            align-items: center;
+            display    : flex;
+        }
 
-//         }
-//     }
-// }
+    }
 
-.background{
-    background-color: #EDEDED;
-    background-image: url(../../assets/img/bg.png);
+    .header-info {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        margin-bottom: 20px;
+
+        .select-year {
+            width          : 117px;
+            height         : 44px;
+            background     : #FFFFFF 0% 0% no-repeat padding-box;
+            border         : 1px solid #CCCCCC;
+            border-radius  : 10px;
+            display        : flex;
+            align-items    : center;
+            justify-content: space-evenly;
+
+            .select {
+                width          : 29px;
+                height         : 29px;
+                background     : #FFFFFF 0% 0% no-repeat padding-box;
+                border         : 1px solid #717171;
+                border-radius  : 7px;
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+
+                img {
+                    width: 70%
+                }
+            }
+        }
+    }
+
+    .card-infos {
+        display        : flex;
+        justify-content: space-evenly;
+        align-items    : center;
+
+        .card {
+            width        : 300px;
+            height       : 156px;
+            background   : #FFFFFF 0% 0% no-repeat padding-box;
+            border       : 1px solid #C6C6C6;
+            border-radius: 21px;
+            padding      : 20px 30px;
+            @include for-notebook{
+                margin-bottom: 10px;
+            }
+            @include for-desktop-only{
+                margin-bottom: 10px;
+                width: 320px;
+            }
+            @include for-small-notebook{
+                width: 280px;
+            }
+        }
+
+    }
+
+    .card-graphic {
+        margin-top     : 20px;
+        display        : flex;
+        align-items    : center;
+        justify-content: space-around;
+
+        .cards {
+            width          : 610px;
+            height         : 289px;
+            background     : #FFFFFF 0% 0% no-repeat padding-box;
+            border         : 1px solid #C6C6C6;
+            border-radius  : 21px;
+            padding        : 20px 30px;
+            display        : flex;
+            align-items    : start;
+            justify-content: space-between;
+            img{
+                width: 30px;
+                height: 30px;
+            }
+            @include for-notebook{
+                margin-bottom: 20px;
+            }
+            @include for-desktop-only{
+                margin-bottom: 20px;
+                width: 640px;                
+            }
+            @include for-small-notebook{
+                width: 560px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.title {
+    text-align    : left;
+    font          : normal normal 800 23px/28px Montserrat;
+    letter-spacing: 0px;
+    color         : #FFFFFF;
+}
+
+.title-dash {
+    font      : normal normal 500 41px Poppins;
+    text-align: left;
+    color     : #FFFFFF;
+}
+
+.title-dash-info {
+    font      : normal normal 500 16px Poppins;
+    text-align: left;
+    color     : #FFFFFF;
+}
+
+.title-cards {
+    font      : normal normal 600 18px Poppins;
+    text-align: left;
+    color     : #1F1F1F;
+}
+
+.title-value {
+    font      : normal normal 600 44px Poppins;
+    text-align: left;
+    color     : #1F1F1F;
+    @include for-small-notebook{
+        font: normal normal 600 40px Poppins;
+        margin-top: 20px;
+    }
+}
+.tiitle-value{
+    font      : normal normal 600 44px Poppins;
+    text-align: left;
+    color     : #1F1F1F;
+    @include for-small-notebook{
+        font: normal normal 600 40px Poppins;
+        margin-top: 0px;
+    }
+}
+
+.background {
+    background-color : #EDEDED;
+    background-image : url(../../assets/img/bg.png);
     background-repeat: repeat-x;
-    width     : 100vw;
-    height    : 100vh;
+    width            : 100vw;
+    height           : 100vw;
+}
+
+.main-container {
+    padding-top : 15px;
+    padding-left: 104px;
 }
