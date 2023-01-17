@@ -7,7 +7,7 @@
     data-bs-toggle="dropdown"
   >
   <img src="/assets/img/menu-item-padrao.PNG" alt="" class="me-3">
-   <img src="/assets/img/Menu.svg" alt="">
+   <img src="/assets/img/Menu.svg" alt="" *ngIf="!isMobile">
   </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="/dashboard">Dashboard de Vendas</a></li>

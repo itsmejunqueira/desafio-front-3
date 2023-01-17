@@ -7,9 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    children: [
-      // { path: '', component: LoginComponent, children: [], canActivate: [] },
-    ],
+    children: [],
   }
 ];
 

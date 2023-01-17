@@ -1,3 +1,4 @@
+@import "../../../assets/scss/breakpoints.scss";
 .user-menu {
     display    : flex;
     align-items: center;
@@ -5,10 +6,20 @@
     .perfil {
         width : 25%;
         height: 25%;
+        margin-right: 20px ;
+        @include for-phone-only{
+            width: 50%;
+            height: 50%;
+            margin-right: 6px;
+        }
     }
 
     .chevron {
         width : 5%;
         height: 5%;
+        @include for-phone-only{
+            width: 10%;
+            height: 10%;
+        }
     }
 }

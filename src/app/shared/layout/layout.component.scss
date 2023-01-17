@@ -1,0 +1,113 @@
+@import "../../../assets/scss/breakpoints.scss";
+
+.background {
+    background-color : #EDEDED;
+    background-image : url(../../../assets/img/bg.png);
+    background-repeat: repeat-x;
+    width            : 100vw;
+    height           : 100vw;
+
+    @include for-phone-only {
+        height: auto;
+    }
+}
+
+.main-container {
+    padding-top : 15px;
+    padding-left: 104px;
+    padding-right: 104px;
+    
+    @include for-phone-only {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.session-nav {
+    margin-right: 30px;
+
+    @include for-phone-only {
+        margin-right: 15px;
+    }
+
+    .header-menu {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+
+        .menu-drop {
+            align-items: center;
+            display    : flex;
+        }
+
+    }
+
+    .header-info {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        margin-bottom  : 20px;
+
+        @include for-phone-only {
+            display: flow-root;
+        }
+
+        .filter-year {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+
+            @include for-phone-only {
+                margin-top: 20px;
+            }
+
+            .select-year {
+                width          : 117px;
+                height         : 44px;
+                background     : #FFFFFF 0% 0% no-repeat padding-box;
+                border         : 1px solid #CCCCCC;
+                border-radius  : 10px;
+                display        : flex;
+                align-items    : center;
+                justify-content: space-evenly;
+
+                .select {
+                    width          : 29px;
+                    height         : 29px;
+                    background     : #FFFFFF 0% 0% no-repeat padding-box;
+                    border         : 1px solid #717171;
+                    border-radius  : 7px;
+                    display        : flex;
+                    justify-content: center;
+                    align-items    : center;
+
+                    img {
+                        width: 70%
+                    }
+                }
+            }
+        }
+    }
+}
+
+.title {
+    text-align    : left;
+    font          : normal normal 800 23px/28px Montserrat;
+    letter-spacing: 0px;
+    color         : #FFFFFF;
+}
+
+.title-dash {
+    font      : normal normal 500 41px Poppins;
+    text-align: left;
+    color     : #FFFFFF;
+    @include for-phone-only {
+        font      : normal normal 500 23px Poppins;
+        text-align: center;
+    }
+}
+
+.title-dash-info {
+    font      : normal normal 500 16px Poppins;
+    text-align: left;
+    color     : #FFFFFF;
+}

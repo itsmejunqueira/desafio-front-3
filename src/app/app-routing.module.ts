@@ -1,34 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
-  },
   {
     path: 'login',
     loadChildren: () =>
       import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'dashboard',
+    path: '',
     loadChildren: () =>
-      import('./dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
+      import('./shared/shared.module').then(
+        (m) => m.SharedModule
       ),
     canActivate: [],
   },
-  // {
-  //   path: 'navigation',
-  //   loadChildren: () =>
-  //     import('./navigation/navigation.module').then(
-  //       (m) => m.NavigationModule
-  //     ),
-  //   canActivate: [],
-  // },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

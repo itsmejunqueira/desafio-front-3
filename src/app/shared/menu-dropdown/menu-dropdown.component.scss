@@ -1,3 +1,4 @@
+@import "../../../assets/scss/breakpoints.scss";
 .drop-menu {
     font: normal normal 600 16px/19px Work Sans;
     letter-spacing: 0px;
@@ -7,6 +8,11 @@
     border-radius: 16px;
     color: #FFFFFF; 
     margin: 10px 10px 10px 0px;
+
+    @include for-phone-only{
+      width: 60px;
+      height: 55px;
+    }
     .btn-menu{
         box-shadow: none;
         border: none;
@@ -14,6 +20,10 @@
         img{
             width: 51px;
             height: 25px;
+            @include for-phone-only{
+              width: 30px;
+              height: 30px;
+            }
         }
     }    
   }

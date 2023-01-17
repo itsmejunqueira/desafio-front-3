@@ -11,17 +11,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
-  declarations: [AppComponent, AuthComponent, ClientesComponent],
+  declarations: [AppComponent, AuthComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     AuthModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
