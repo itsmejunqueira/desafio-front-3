@@ -1,130 +1,56 @@
 @import "../../assets/scss/breakpoints.scss";
-.session-nav {
-    margin-right: 30px;
 
-    .header-menu {
-        display        : flex;
+.card-infos {
+    display        : flex;
+    justify-content: space-evenly;
+    align-items    : center;
+
+    &.row>* {
+        padding-right: 0px !important;
+        padding-left : 0px !important;
+    }
+
+    @include for-phone-only {
         justify-content: space-between;
-        align-items    : center;
-
-        .menu-drop {
-            align-items: center;
-            display    : flex;
-        }
-
     }
 
-    .header-info {
-        display        : flex;
-        justify-content: space-between;
-        align-items    : center;
-        margin-bottom: 20px;
+    .card {
+        height         : 156px;
+        background     : #FFFFFF 0% 0% no-repeat padding-box;
+        border         : 1px solid #C6C6C6;
+        border-radius  : 21px;
+        justify-content: center;
 
-        .select-year {
-            width          : 117px;
-            height         : 44px;
-            background     : #FFFFFF 0% 0% no-repeat padding-box;
-            border         : 1px solid #CCCCCC;
-            border-radius  : 10px;
-            display        : flex;
-            align-items    : center;
-            justify-content: space-evenly;
-
-            .select {
-                width          : 29px;
-                height         : 29px;
-                background     : #FFFFFF 0% 0% no-repeat padding-box;
-                border         : 1px solid #717171;
-                border-radius  : 7px;
-                display        : flex;
-                justify-content: center;
-                align-items    : center;
-
-                img {
-                    width: 70%
-                }
-            }
+        @include for-phone-only {
+            height: 125px;
         }
     }
 
-    .card-infos {
-        display        : flex;
-        justify-content: space-evenly;
-        align-items    : center;
-
-        .card {
-            width        : 300px;
-            height       : 156px;
-            background   : #FFFFFF 0% 0% no-repeat padding-box;
-            border       : 1px solid #C6C6C6;
-            border-radius: 21px;
-            padding      : 20px 30px;
-            @include for-notebook{
-                margin-bottom: 10px;
-            }
-            @include for-desktop-only{
-                margin-bottom: 10px;
-                width: 320px;
-            }
-            @include for-small-notebook{
-                width: 280px;
-            }
-        }
-
-    }
-
-    .card-graphic {
-        margin-top     : 20px;
-        display        : flex;
-        align-items    : center;
-        justify-content: space-around;
-
-        .cards {
-            width          : 610px;
-            height         : 289px;
-            background     : #FFFFFF 0% 0% no-repeat padding-box;
-            border         : 1px solid #C6C6C6;
-            border-radius  : 21px;
-            padding        : 20px 30px;
-            display        : flex;
-            align-items    : start;
-            justify-content: space-between;
-            img{
-                width: 30px;
-                height: 30px;
-            }
-            @include for-notebook{
-                margin-bottom: 20px;
-            }
-            @include for-desktop-only{
-                margin-bottom: 20px;
-                width: 640px;                
-            }
-            @include for-small-notebook{
-                width: 560px;
-                margin-left: 5px;
-            }
-        }
-    }
 }
 
-.title {
-    text-align    : left;
-    font          : normal normal 800 23px/28px Montserrat;
-    letter-spacing: 0px;
-    color         : #FFFFFF;
-}
+.card-graphic {
+    margin-top     : 20px;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-around;
 
-.title-dash {
-    font      : normal normal 500 41px Poppins;
-    text-align: left;
-    color     : #FFFFFF;
-}
+    &.row>* {
+        padding-right: 0px !important;
+        padding-left : 0px !important;
+    }
 
-.title-dash-info {
-    font      : normal normal 500 16px Poppins;
-    text-align: left;
-    color     : #FFFFFF;
+    .cards {
+        height       : 310px;
+        background   : #FFFFFF 0% 0% no-repeat padding-box;
+        border       : 1px solid #C6C6C6;
+        border-radius: 21px;
+        padding      : 20px 30px;
+
+        img {
+            width : 30px;
+            height: 30px;
+        }
+    }
 }
 
 .title-cards {
@@ -137,30 +63,58 @@
     font      : normal normal 600 44px Poppins;
     text-align: left;
     color     : #1F1F1F;
-    @include for-small-notebook{
-        font: normal normal 600 40px Poppins;
+
+    @include for-small-notebook {
+        font      : normal normal 600 44px Poppins;
         margin-top: 20px;
     }
-}
-.tiitle-value{
-    font      : normal normal 600 44px Poppins;
-    text-align: left;
-    color     : #1F1F1F;
-    @include for-small-notebook{
-        font: normal normal 600 40px Poppins;
+    @include for-tablet-landscape-only {
+        font      : normal normal 600 35px Poppins;
         margin-top: 0px;
     }
 }
 
-.background {
-    background-color : #EDEDED;
-    background-image : url(../../assets/img/bg.png);
-    background-repeat: repeat-x;
-    width            : 100vw;
-    height           : 100vw;
+.tiitle-value {
+    font      : normal normal 600 44px Poppins;
+    text-align: left;
+    color     : #1F1F1F;
+
+    @include for-small-notebook {
+        font      : normal normal 600 40px Poppins;
+        margin-top: 0px;
+    }
+    @include for-tablet-landscape-only {
+        font      : normal normal 600 35px Poppins;
+        margin-top: 0px;
+    }
+
 }
 
-.main-container {
-    padding-top : 15px;
-    padding-left: 104px;
+
+.chart-holder {
+    margin-top     : 10px;
+    height         : 240px;
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.myChart3 {
+    height         : 380px;
+    width          : 60%;
+    margin-left    : 25%;
+    display        : flex;
+    align-items    : start;
+    justify-content: center;
+
+    @include for-phone-only {
+        height     : 304px;
+        width      : 80vw;
+        margin-left: 0%;
+    }
+
+    @include for-desktop-only {
+        width: 57%;
+    }
 }

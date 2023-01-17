@@ -1,63 +1,80 @@
-<div class="background">
-  <div class="main-container">
-    <div class="session-nav">
-      <div class="header-menu">
-        <div class="menu-drop">
-          <app-menu-dropdown></app-menu-dropdown>
-          <span class="title">DOUBLEIT </span>
-        </div>
-        <div class="user-drop">
-          <app-user-drop> </app-user-drop>
-        </div>
+<div class="container w-100">
+  <div class="row card-infos">
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card my-2 mx-1 p-2">
+
+        <span class="title-cards"> Valor total vendido </span>
+        <span class="title-value"> R$ 2.981,00 </span>
       </div>
-      <div class="header-info">
-        <span class="title-dash"> Dashboard de Vendas DoubleIt </span>
-        <div class="d-flex align-items-center justify-content-center">
-          <span class="title-dash-info me-3"> Selecionar ano </span>
-          <div class="select-year">
-            2022
-            <span class="select">
-              <img src="/assets/img/chevron-down.png" alt="" />
-            </span>
-          </div>
-        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card my-2 mx-1 p-2">
+
+        <span class="title-cards"> Quantidade total vendida </span>
+        <span class="title-value"> 424 </span>
       </div>
-      <div class="row card-infos">
-        <div class="card col-3">
-          <span class="title-cards"> Valor total vendido </span>
-          <span class="title-value"> R$ 2.981,00 </span>
-        </div>
-        <div class="card col-3">
-          <span class="title-cards"> Quantidade total vendida </span>
-          <span class="tiitle-value"> 424 </span>
-        </div>
-        <div class="card col-3">
-          <span class="title-cards">Marca 1</span>
-          <span class="title-value"> R$ 1.443,00 </span>
-        </div>
-        <div class="card col-3">
-          <span class="title-cards">Marca 2</span>
-          <span class="title-value"> R$ 1.538,00 </span>
-        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card my-2 mx-1 p-2">
+
+        <span class="title-cards">Marca 1</span>
+        <span class="title-value"> R$ 1.443,00 </span>
       </div>
-      <div class="row card-graphic">
-        <div class="cards col-6">
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card my-2 mx-1 p-2">
+
+        <span class="title-cards">Marca 2</span>
+        <span class="title-value"> R$ 1.538,00 </span>
+      </div>
+    </div>
+  </div>
+  <div class="row card-graphic">
+    <div class="col-12 col-lg-6">
+      <div class="cards m-1">
+        <div class="d-flex align-items-start justify-content-between">
           <span class="title-cards"> Valor total vendido por produto </span>
           <img src="/assets/img/filtro.PNG" alt="" />
         </div>
-        <div class="cards col-6">
-          <span class="title-cards"> Quantidade vendida por produto </span>
-          <img src="/assets/img/filtro.PNG" alt="" />
+        <div class="chart-holder">
+          <canvas id="myChart"></canvas>
         </div>
       </div>
-      <div class="row card-graphic">
-        <div class="cards col-6">
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="cards m-1">
+
+        <div class="d-flex align-items-start justify-content-between">
+          <span class="title-cards"> Quantidade vendida
+            por produto </span>
+            <img src="/assets/img/filtro.PNG" alt="" />
+          </div>
+          <div class="chart-holder">
+            <canvas id="myChart2"></canvas>
+          </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="cards m-1">
+
+        <div class="d-flex align-items-start justify-content-between">
           <span class="title-cards"> Valor total vendido por local </span>
           <img src="/assets/img/filtro.PNG" alt="" />
         </div>
-        <div class="cards col-6">
+        <div class="myChart3">
+          <canvas id="myChart3"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="cards m-1">
+
+        <div class="d-flex align-items-start justify-content-between">
           <span class="title-cards"> Quantidade vendida por mês (R$) </span>
           <img src="/assets/img/filtro.PNG" alt="" />
+        </div>
+        <div class="chart-holder">
+          <canvas id="myChart4"></canvas>
         </div>
       </div>
     </div>
