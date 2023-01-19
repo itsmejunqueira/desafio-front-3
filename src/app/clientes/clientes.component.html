@@ -1,1 +1,133 @@
-<p>clientes works!</p>
+<div class="w-100">
+  <div class="header-info">
+    <div class="title-dash">
+      Clientes
+      <button type="button" class="btn btn-success">
+        <img src="/assets/img/adicionar.svg" alt="" /> Cadastrar Cliente
+      </button>
+      <button type="button" class="btn btn-danger ms-3">
+        <img src="/assets/img/remover.svg" alt="" /> Cliente Inativo
+      </button>
+    </div>
+    <div class="filter-year">
+      <span class="title-dash-info me-3"> Selecionar ano </span>
+      <div class="select-year">
+        2022
+        <span class="select">
+          <img src="/assets/img/chevron-down.PNG" alt="" />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="filter-table">
+    <div class="filter-container">
+      <div class="filter-input input-type">
+        <label class="title-filter" for="">Tipo de pesquisa</label>
+        <div class="type-search w-100">
+          Qualquer parte
+          <span class="select">
+            <img src="/assets/img/chevron-down.PNG" alt="" />
+          </span>
+        </div>
+      </div>
+      <div class="filter-input input-name">
+        <label class="title-filter" for="">Nome/Fantasia/Razão</label>
+        <input
+          type="text"
+          class="form-control shadow-none"
+          placeholder=""
+          formControlName=""
+        />
+      </div>
+      <div class="filter-input input-document">
+        <label class="title-filter" for="">CPF/CNPJ</label>
+        <input
+          type="text"
+          class="form-control shadow-none"
+          placeholder=""
+          formControlName=""
+        />
+      </div>
+      <div class="filter-input input-phone">
+        <label class="title-filter" for="">Telefone</label>
+        <input
+          type="text"
+          class="form-control shadow-none"
+          placeholder=""
+          formControlName=""
+        />
+      </div>
+      <div class="filter-input input-state">
+        <label class="title-filter" for="">Estado</label>
+        <input
+          type="text"
+          class="form-control shadow-none"
+          placeholder=""
+          formControlName=""
+        />
+      </div>
+      <div class="filter-input input-city">
+        <label class="title-filter" for="">Cidade</label>
+        <input
+          type="text"
+          class="form-control shadow-none"
+          placeholder=""
+          formControlName=""
+        />
+      </div>
+      <div class="filter-input input-search">
+        <div class="search">
+          <img src="assets/img/busca_icon.PNG" alt="" height="44px" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-container">
+    <div class="session-table mt-2">
+      <table class="table header-fixed table-hover table-striped" width="100%">
+        <thead>
+          <tr>
+            <th
+              *ngFor="let item of selectedHeaderItems; let i = index"
+              class="align-middle"
+              scope="col"
+            >
+              <span
+                >{{ item?.label }}
+                <i class="arrow" *ngIf="item.canSort">
+                  <img
+                    class="ordering"
+                    src="/assets/img/chevron-down.PNG
+        "
+                /></i>
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of clientList; let i = index">
+            <td class="">
+              <button class="btn btn-menu" type="button">
+                <img src="/assets/img/gerenciar.svg" alt="" />
+              </button>
+            </td>
+            <td class="align-middle" [innerHTML]="item?.id"></td>
+            <td class="align-middle" [innerHTML]="item?.name"></td>
+            <td class="align-middle" [innerHTML]="item?.phone"></td>
+            <td class="align-middle" [innerHTML]="item?.date"></td>
+            <td class="align-middle">
+              <button class="btn btn-menu" type="button">
+                <img src="/assets/img/atualizar.svg" alt="" />
+              </button>
+            </td>
+            <td class="align-middle">
+              <button class="btn btn-menu" type="button">
+                <img src="/assets/img/action.PNG" alt="" />
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

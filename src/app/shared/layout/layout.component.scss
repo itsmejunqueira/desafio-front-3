@@ -96,18 +96,3 @@
     color         : #FFFFFF;
 }
 
-.title-dash {
-    font      : normal normal 500 41px Poppins;
-    text-align: left;
-    color     : #FFFFFF;
-    @include for-phone-only {
-        font      : normal normal 500 23px Poppins;
-        text-align: center;
-    }
-}
-
-.title-dash-info {
-    font      : normal normal 500 16px Poppins;
-    text-align: left;
-    color     : #FFFFFF;
-}

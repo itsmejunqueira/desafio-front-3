@@ -118,3 +118,68 @@
         width: 57%;
     }
 }
+
+.header-info {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    margin-bottom  : 20px;
+    
+    
+    .title-dash {
+        font      : normal normal 500 41px Poppins;
+        text-align: left;
+        color     : #FFFFFF;
+        @include for-phone-only {
+            font      : normal normal 500 23px Poppins;
+            text-align: center;
+        }
+    }
+    
+    .title-dash-info {
+        font      : normal normal 500 16px Poppins;
+        text-align: left;
+        color     : #FFFFFF;
+    }
+    
+
+    @include for-phone-only {
+        display: flow-root;
+    }
+
+    .filter-year {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        @include for-phone-only {
+            margin-top: 20px;
+        }
+
+        .select-year {
+            width          : 117px;
+            height         : 44px;
+            background     : #FFFFFF 0% 0% no-repeat padding-box;
+            border         : 1px solid #CCCCCC;
+            border-radius  : 10px;
+            display        : flex;
+            align-items    : center;
+            justify-content: space-evenly;
+
+            .select {
+                width          : 29px;
+                height         : 29px;
+                background     : #FFFFFF 0% 0% no-repeat padding-box;
+                border         : 1px solid #717171;
+                border-radius  : 7px;
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+
+                img {
+                    width: 70%
+                }
+            }
+        }
+    }
+}
