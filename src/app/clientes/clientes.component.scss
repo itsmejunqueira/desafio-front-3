@@ -128,16 +128,44 @@
 .session-table {
     width  : 100%;
     padding: 0px 25px;
+    @include for-phone-only {
+        padding: 0px 10px;
+    }
+    table {
+       
+        overflow: auto;
+        width: 100%;
+        @include for-phone-only {
+          width: 99%;
+          display: flow-root;
+        }
+      }
+      thead {
+       
+        tr {
+          white-space: nowrap;
+          border-style: hidden;
+  
+          td {
+            white-space: nowrap;
+            font-size: 18px;
+            color: #1f1f1f;
+            font-weight: 900;
+          }
+        }
+    }   
 
     tbody {
-
+        flex: 1 1 auto;
         tr {
-
+            border-style: hidden;
             td {
+                white-space: nowrap;
                 text-align    : left;
                 font          : normal normal 600 17px/26px Poppins;
                 letter-spacing: 0px;
                 color         : #1F1F1F;
+                cursor: pointer;
             }
         }
     }
@@ -162,6 +190,8 @@
         @include for-phone-only {
             font      : normal normal 500 23px Poppins;
             text-align: center;
+            display: inline-flex;
+            margin: 0px 10px;
         }
     }
 
