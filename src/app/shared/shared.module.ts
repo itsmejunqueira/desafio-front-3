@@ -1,9 +1,7 @@
-import { ClientesComponent } from './../clientes/clientes.component';
 import { MenuDropdownComponent } from './menu-dropdown/menu-dropdown.component';
 import { UserDropComponent } from './user-drop/user-drop.component';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { SharedRoutingModule } from './shared-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,6 +12,8 @@ import { FormClientComponent } from './register/form-client/form-client.componen
 import { ClientService } from '../core/services/client.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClientesComponent } from '../pages/clientes/clientes.component';
 
 
 @NgModule({
@@ -21,8 +21,8 @@ import {  MatDialogModule } from '@angular/material/dialog';
     LayoutComponent,
     UserDropComponent,
     MenuDropdownComponent,
-    ClientesComponent,
     FormClientComponent,
+    ClientesComponent
   ],
   imports: [
     RouterModule,
@@ -33,7 +33,7 @@ import {  MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     ReactiveFormsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,    
   ],
   exports: [
     FormsModule,

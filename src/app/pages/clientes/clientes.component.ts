@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { TClients, THeader } from '../core/models/clients.models';
-import { ClientService } from '../core/services/client.service';
-import { FormClientComponent } from '../shared/register/form-client/form-client.component';
 import { MatDialog } from '@angular/material/dialog';
+import { TClients, THeader } from 'src/app/core/models/clients.models';
+import { ClientService } from 'src/app/core/services/client.service';
+import { FormClientComponent } from 'src/app/shared/register/form-client/form-client.component';
 
 @Component({
   selector: 'app-clientes',

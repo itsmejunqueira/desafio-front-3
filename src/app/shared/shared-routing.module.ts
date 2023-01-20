@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClientesComponent } from '../clientes/clientes.component';
+import { ClientesComponent } from '../pages/clientes/clientes.component';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () =>
-          import('../dashboard/dashboard.module').then(
+          import('../pages/dashboard/dashboard.module').then(
             (m) => m.DashboardModule
           ),
         canActivate: [],
@@ -21,7 +21,7 @@ const routes: Routes = [
         redirectTo: '/dashboard',
         pathMatch: 'full',
       },
-      { path: 'clientes', canActivate: [], component: ClientesComponent },     
+      { path: 'clientes', canActivate: [], component: ClientesComponent },
     ],
   },
 ];
