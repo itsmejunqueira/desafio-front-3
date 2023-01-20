@@ -51,6 +51,9 @@
     @include for-phone-only {
         text-align: start;
     }
+    @include for-desktop-only {
+        width: 170px;
+    }
 }
 
 .form-label-gg{
@@ -124,13 +127,13 @@
     border-radius: 10px;
     cursor       : pointer;
 }
-.form-style-mobile {
-    display: flex;
-    align-items: center;
-    @include for-phone-only{ 
+
+.form-style {
+    display       : flex;
+    margin-bottom : 15px;
+    @include for-phone-only{
         display: grid;
     }
-    
 }
 .form-check {
     margin-left: 12%;
@@ -145,10 +148,4 @@
     width: 100%;
 }
 
-.form-style {
-    display       : flex;
-    margin-bottom : 15px;
-    @include for-phone-only{
-        display: grid;
-    }
-}
+
