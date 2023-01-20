@@ -2,7 +2,7 @@
   <div class="header-info">
     <div class="title-dash">
       Clientes
-      <button type="button" class="btn btn-success ms-2 ">
+      <button type="button" class="btn btn-success ms-2 " (click)="createClient()">
         <img src="/assets/img/adicionar.svg" alt="" /> Cadastrar Cliente
       </button>
       <button type="button" class="btn btn-danger ms-3">
@@ -36,7 +36,6 @@
           type="text"
           class="form-control shadow-none"
           placeholder=""
-          formControlName=""
         />
       </div>
       <div class="filter-input input-document">
@@ -45,7 +44,6 @@
           type="text"
           class="form-control shadow-none"
           placeholder=""
-          formControlName=""
         />
       </div>
       <div class="filter-input input-phone">
@@ -54,7 +52,6 @@
           type="text"
           class="form-control shadow-none"
           placeholder=""
-          formControlName=""
         />
       </div>
       <div class="filter-input input-state">
@@ -63,7 +60,6 @@
           type="text"
           class="form-control shadow-none"
           placeholder=""
-          formControlName=""
         />
       </div>
       <div class="filter-input input-city">
@@ -72,7 +68,6 @@
           type="text"
           class="form-control shadow-none"
           placeholder=""
-          formControlName=""
         />
       </div>
       <div class="filter-input input-search">

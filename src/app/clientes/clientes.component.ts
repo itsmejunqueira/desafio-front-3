@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { TClients, THeader } from '../core/models/clients.models';
 import { ClientService } from '../core/services/client.service';
+import { FormClientComponent } from '../shared/register/form-client/form-client.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-clientes',
@@ -12,7 +14,9 @@ export class ClientesComponent {
   public selectedHeaderItems: THeader[] =
     this._clientService.getTableHeaderValue();
 
-  constructor(private _clientService: ClientService) {}
+
+  constructor(private _clientService: ClientService,
+    public dialog: MatDialog,) {}
   ngOnInit(): void {
     this.loadclients();
   }
@@ -21,4 +25,13 @@ export class ClientesComponent {
       this.clientList = clientsResult;
     });
   }
+
+  public async createClient(item?: any): Promise<void> {
+    const dialogRef = this.dialog.open(FormClientComponent, { panelClass: 'modal-rounded' });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
+     
+    });
+  }
+
 }

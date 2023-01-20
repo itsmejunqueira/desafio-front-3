@@ -1,0 +1,99 @@
+@import "../../../../assets/scss/breakpoints.scss";
+
+.container-modal {
+    overflow-x: hidden;
+    max-height: 80vh;
+    overflow-y: auto;
+   .session-form{
+    overflow: auto;
+   }
+}
+
+.header-modal {
+    display        : flex;
+    align-items    : start;
+    justify-content: end;
+    cursor         : pointer;
+    @include for-phone-only{
+        margin-bottom: 15px;
+    }
+}
+.title-1 {
+    font-size    : 41px;
+    font-weight  : 600;
+    margin-bottom: 30px;
+    @include for-phone-only{
+        font-size: 25px;
+    }
+}
+
+.title-2 {
+    font-size  : 22px;
+    font-weight: 600;
+}
+
+.form-label {
+    width       : 130px;
+    margin-right: 10px;
+    text-align  : end;
+
+    @include for-phone-only {
+        text-align: start;
+    }
+}
+
+.form-control {
+    width        : 100%;
+    height       : 44px;
+    background   : #FFFFFF 0% 0% no-repeat padding-box;
+    border       : 1px solid #CCCCCC;
+    border-radius: 10px;
+    cursor       : pointer;
+}
+
+.form-select {
+    height       : 44px;
+    border       : 1px solid #CCCCCC;
+    border-radius: 10px;
+    box-shadow   : none;
+    cursor       : pointer;
+}
+
+.form-label-select {
+    width      : 70px;
+    margin-left: 5px;
+}
+
+.form-input-controls {
+    width: 50%
+}
+
+.form-controls {
+    width        : 70%;
+    height       : 44px;
+    background   : #FFFFFF 0% 0% no-repeat padding-box;
+    border       : 1px solid #CCCCCC;
+    border-radius: 10px;
+    cursor       : pointer;
+}
+
+.form-check {
+    margin-left: 12%;
+
+}
+
+.required-star {
+    color: red;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-style {
+    display       : flex;
+    margin-bottom : 15px;
+    @include for-phone-only{
+        display: grid;
+    }
+}

@@ -1,1 +1,467 @@
-<p>form-client works!</p>
+<div class="h-100 m-3 p-3">
+  <div class="container-modal">
+    <div class="header-modal">
+      <img src="/assets/img/close-modal.svg" alt="" (click)="close()" />
+    </div>
+    <div class="title-1">Cadastrar Cliente</div>
+
+    <form [formGroup]="form" *ngIf="form">
+      <div class="session-form">
+        <div class="form-basic">
+          <div class="row form-initial">
+            <div class="col-12 col-md-6">
+              <div class="form-style">
+                <label for="inputEmail" class="form-label"
+                  >E-mail
+                  <span
+                    [ngClass]="
+                      form.controls['email']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail"
+                    formControlName="email" 
+                    id="email"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputEmail" class="form-label"
+                  >Repetir e-mail
+                  <span
+                    [ngClass]="
+                      form.controls['repetEmail']?.invalid
+                        ? 'required-star'
+                        : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail"
+                    formControlName="repetEmail" 
+                    id="repetEmail"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-style">
+                <label for="inputPassword" class="form-label"
+                  >Crie uma senha
+                  <span
+                    [ngClass]="
+                      form.controls['password']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword"
+                    formControlName="password" 
+                    id="password"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputPassword" class="form-label"
+                  >Repetir senha
+                  <span
+                    [ngClass]="
+                      form.controls['repetPassword']?.invalid
+                        ? 'required-star'
+                        : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword"
+                    formControlName="repetPassword" 
+                    id="repetPassword"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-3 d-flex">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                  checked
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                    Receber ofertas e novidades via e-mail
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 form-general">
+              <span class="title-2">Dados Cadastrais </span>
+              <div class="mt-3 form-style">
+                <label for="inputName" class="form-label"
+                  >Nome
+                  <span
+                    [ngClass]="
+                      form.controls['name']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="name"
+                    class="form-control"
+                    id="inputName"
+                    formControlName="name" 
+                    id="name"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputLastName" class="form-label"
+                  >Sobrenome
+                  <span
+                    [ngClass]="
+                      form.controls['lastName']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputLastName"
+                    formControlName="lastName" 
+                    id="lastName"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputGender" class="form-label"
+                  >Sexo
+                  <span
+                    [ngClass]="
+                      form.controls['gender']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input-sm">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="1">Masculino</option>
+                        <option value="2">feminino</option>
+                      </select>
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputcpf" class="form-label"
+                  >CPF
+                  <span
+                    [ngClass]="
+                      form.controls['cpf']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input-sm">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputcpf"
+                    formControlName="cpf" 
+                    id="cpf"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputPhone" class="form-label"
+                  >Telefone<span
+                    [ngClass]="
+                      form.controls['phone']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input-sm">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputPhone"
+                    formControlName="phone" 
+                    id="phone"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputcell" class="form-label"
+                  >Celular
+                  <span
+                    [ngClass]="
+                      form.controls['cell']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input-sm">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputcell"
+                    formControlName="cell" 
+                    id="cell"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputbirth" class="form-label"
+                  >Nascimento<span
+                    [ngClass]="
+                      form.controls['birth']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input-sm">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="inputbirth"
+                    formControlName="birth" 
+                    id="birth"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 form-address">
+              <span class="title-2"> Endereço de Entrega</span>
+              <div class="mt-3 form-style">
+                <label for="inputCEP" class="form-label"
+                  >CEP
+                  <span
+                    [ngClass]="
+                      form.controls['cep']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="col-sm-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputCEP"
+                    formControlName="cep" 
+                    id="cep"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputStreet" class="form-label"
+                  >Rua
+                  <span
+                    [ngClass]="
+                      form.controls['street']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input-sm">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputStreet"
+                    formControlName="street" 
+                    id="street"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputnumber" class="form-label"
+                  >Número
+                  <span
+                    [ngClass]="
+                      form.controls['number']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="col-sm-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputnumber"
+                    formControlName="number" 
+                    id="number"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputComplement" class="form-label"
+                  >Complemento
+                  <span
+                    [ngClass]="
+                      form.controls['complement']?.invalid
+                        ? 'required-star'
+                        : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputComplement"
+                    formControlName="complement" 
+                    id="complement"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputReference" class="form-label"
+                  >Referência<span
+                    [ngClass]="
+                      form.controls['reference']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputReference"
+                    formControlName="reference" 
+                    id="reference"
+                  />
+                </div>
+              </div>
+              <div class="form-style">
+                <label for="inputNeighborhood" class="form-label"
+                  >Bairro
+                  <span
+                    [ngClass]="
+                      form.controls['neighborhood']?.invalid
+                        ? 'required-star'
+                        : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputNeighborhood"
+                    formControlName="neighborhood" 
+                    id="neighborhood"
+                  />
+                </div>
+              </div>
+              <div class="d-flex  align-items-center"> 
+               <div class="mb-3 d-flex ">
+                <label for="inputCity" class="form-label"
+                  >Cidade<span
+                    [ngClass]="
+                      form.controls['city']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div class="form-input-controls">
+                  <input
+                    type="text"
+                    class="form-controls"
+                    id="inputCity"
+                    formControlName="city" 
+                    id="city"
+                  />
+                </div>
+              </div>
+              <div class="mb-3 d-flex">
+                <label for="inputstate" class="form-label-select"
+                  >Estado<span
+                    [ngClass]="
+                      form.controls['state']?.invalid ? 'required-star' : ''
+                    "
+                  >
+                    *</span
+                  ></label
+                >
+                <div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected> AC</option>
+                        <option value="1"> AL</option>
+                        <option value="2">AP</option>
+                        <option value="3">AM</option>
+                        <option value="4">BA</option>
+                        <option value="5">CE</option>
+                        <option value="6">DF</option>
+                        <option value="7">ES</option> 
+                        <option value="8">GO</option>
+                        <option value="9">MA</option>
+                        <option value="10">MT</option>
+                        <option value="11">MS</option>
+                        <option value="12">MG</option>
+                        <option value="13">PA</option>
+                        <option value="14">PB</option>
+                        <option value="15">PR</option>
+                        <option value="16">PE</option>
+                        <option value="17">PI</option>
+                        <option value="18">RJ</option>
+                        <option value="19">RN</option>
+                        <option value="20">RS</option>
+                        <option value="21">RO</option>
+                        <option value="22">RR</option>
+                        <option value="23">SC</option>
+                        <option value="24">SP</option>
+                        <option value="25">SE</option>
+                        <option value="26">TO</option>
+                      </select>
+                </div>
+              </div>
+            </div>             
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -12,6 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { FormClientComponent } from './register/form-client/form-client.component';
 import { ClientService } from '../core/services/client.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -29,6 +31,13 @@ import { ClientService } from '../core/services/client.service';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatDialogModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ClientService]
 })
