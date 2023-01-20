@@ -11,7 +11,7 @@
           <div class="row form-initial">
             <div class="col-12 col-md-6">
               <div class="form-style">
-                <label for="inputEmail" class="form-label"
+                <label for="inputEmail" class="form-label-xxg"
                   >E-mail
                   <span
                     [ngClass]="
@@ -24,7 +24,7 @@
                 <div class="form-input">
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control-md"
                     id="inputEmail"
                     formControlName="email" 
                     id="email"
@@ -32,7 +32,7 @@
                 </div>
               </div>
               <div class="form-style">
-                <label for="inputEmail" class="form-label"
+                <label for="inputEmail" class="form-label-xxg"
                   >Repetir e-mail
                   <span
                     [ngClass]="
@@ -47,7 +47,7 @@
                 <div class="form-input">
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control-md"
                     id="inputEmail"
                     formControlName="repetEmail" 
                     id="repetEmail"
@@ -57,7 +57,7 @@
             </div>
             <div class="col-12 col-md-6">
               <div class="form-style">
-                <label for="inputPassword" class="form-label"
+                <label for="inputPassword" class="form-label-xxg"
                   >Crie uma senha
                   <span
                     [ngClass]="
@@ -70,7 +70,7 @@
                 <div class="form-input">
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control-md"
                     id="inputPassword"
                     formControlName="password" 
                     id="password"
@@ -78,7 +78,7 @@
                 </div>
               </div>
               <div class="form-style">
-                <label for="inputPassword" class="form-label"
+                <label for="inputPassword" class="form-label-xxg"
                   >Repetir senha
                   <span
                     [ngClass]="
@@ -93,7 +93,7 @@
                 <div class="form-input">
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control-md"
                     id="inputPassword"
                     formControlName="repetPassword" 
                     id="repetPassword"
@@ -120,7 +120,7 @@
             <div class="col-12 col-md-6 form-general">
               <span class="title-2">Dados Cadastrais </span>
               <div class="mt-3 form-style">
-                <label for="inputName" class="form-label"
+                <label for="inputName" class="form-label-g"
                   >Nome
                   <span
                     [ngClass]="
@@ -141,7 +141,7 @@
                 </div>
               </div>
               <div class="form-style">
-                <label for="inputLastName" class="form-label"
+                <label for="inputLastName" class="form-label-g"
                   >Sobrenome
                   <span
                     [ngClass]="
@@ -266,7 +266,7 @@
             <div class="col-12 col-md-6 form-address">
               <span class="title-2"> Endereço de Entrega</span>
               <div class="mt-3 form-style">
-                <label for="inputCEP" class="form-label"
+                <label for="inputCEP" class="form-label-gg"
                   >CEP
                   <span
                     [ngClass]="
@@ -287,7 +287,7 @@
                 </div>
               </div>
               <div class="form-style">
-                <label for="inputStreet" class="form-label"
+                <label for="inputStreet" class="form-label-gg"
                   >Rua
                   <span
                     [ngClass]="
@@ -300,7 +300,7 @@
                 <div class="form-input-sm">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control-md"
                     id="inputStreet"
                     formControlName="street" 
                     id="street"
@@ -308,7 +308,7 @@
                 </div>
               </div>
               <div class="form-style">
-                <label for="inputnumber" class="form-label"
+                <label for="inputnumber" class="form-label-gg"
                   >Número
                   <span
                     [ngClass]="
@@ -329,7 +329,7 @@
                 </div>
               </div>
               <div class="form-style">
-                <label for="inputComplement" class="form-label"
+                <label for="inputComplement" class="form-label-xg"
                   >Complemento
                   <span
                     [ngClass]="
@@ -344,7 +344,7 @@
                 <div class="form-input">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control-md"
                     id="inputComplement"
                     formControlName="complement" 
                     id="complement"
@@ -352,7 +352,7 @@
                 </div>
               </div>
               <div class="form-style">
-                <label for="inputReference" class="form-label"
+                <label for="inputReference" class="form-label-xg"
                   >Referência<span
                     [ngClass]="
                       form.controls['reference'].invalid ? 'required-star' : ''
@@ -364,7 +364,7 @@
                 <div class="form-input">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control-md"
                     id="inputReference"
                     formControlName="reference" 
                     id="reference"
@@ -372,7 +372,7 @@
                 </div>
               </div>
               <div class="form-style">
-                <label for="inputNeighborhood" class="form-label"
+                <label for="inputNeighborhood" class="form-label-xg"
                   >Bairro
                   <span
                     [ngClass]="
@@ -387,16 +387,16 @@
                 <div class="form-input">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control-md"
                     id="inputNeighborhood"
                     formControlName="neighborhood" 
                     id="neighborhood"
                   />
                 </div>
               </div>
-              <div class="d-flex  align-items-center"> 
+              <div class="form-style-mobile"> 
                <div class="mb-3 d-flex ">
-                <label for="inputCity" class="form-label"
+                <label for="inputCity" class="form-label-gg"
                   >Cidade<span
                     [ngClass]="
                       form.controls['city'].invalid ? 'required-star' : ''

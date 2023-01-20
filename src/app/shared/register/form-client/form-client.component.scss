@@ -1,7 +1,7 @@
 @import "../../../../assets/scss/breakpoints.scss";
 
 .container-modal {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     max-height: 80vh;
     overflow-y: auto;
    .session-form{
@@ -33,15 +33,52 @@
 }
 
 .form-label {
-    width       : 130px;
+    width: 100px;    
     margin-right: 10px;
     text-align  : end;
-
+    @include for-desktop-only{
+        width       : 130px;
+    }
     @include for-phone-only {
         text-align: start;
     }
 }
 
+.form-label-g{
+    width       : 130px;
+    margin-right: 10px;
+    text-align  : end;
+    @include for-phone-only {
+        text-align: start;
+    }
+}
+
+.form-label-gg{
+    width       : 115px;
+    margin-right: 10px;
+    text-align  : end;
+    @include for-phone-only {
+        text-align: start;
+        width: auto;
+    }
+} 
+
+.form-label-xg{
+    width       : 155px;
+    margin-right: 10px;
+    text-align  : end;
+    @include for-phone-only {
+        text-align: start;
+    }
+}
+.form-label-xxg{
+    width: 175px;
+    margin-right: 10px;
+    text-align  : end;
+    @include for-phone-only {
+        text-align: start;
+    }
+}
 .form-control {
     width        : 100%;
     height       : 44px;
@@ -49,6 +86,17 @@
     border       : 1px solid #CCCCCC;
     border-radius: 10px;
     cursor       : pointer;
+}
+.form-control-md{
+    width        : 88%;
+    height       : 44px;
+    background   : #FFFFFF 0% 0% no-repeat padding-box;
+    border       : 1px solid #CCCCCC;
+    border-radius: 10px;
+    cursor       : pointer;
+    @include for-phone-only {
+        width        : 100%;
+    }
 }
 
 .form-select {
@@ -76,7 +124,14 @@
     border-radius: 10px;
     cursor       : pointer;
 }
-
+.form-style-mobile {
+    display: flex;
+    align-items: center;
+    @include for-phone-only{ 
+        display: grid;
+    }
+    
+}
 .form-check {
     margin-left: 12%;
 
