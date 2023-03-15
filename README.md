@@ -8,11 +8,6 @@ Sistema interno
 - Modal de cadastro
 
 
-login de acesso - fornecida pela api publica: 
-
-    email: ,
-    password: 
-
 👓 
  * [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
  * Html/Css/js
