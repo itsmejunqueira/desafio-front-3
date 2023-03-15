@@ -1,4 +1,30 @@
-# Desafio3
+# Desafio 3
+📌About 
+
+Sistema interno 
+- Tela de Login
+- Tela de Inicio (dashboard de vendas).
+- clientes
+- Modal de cadastro
+
+
+login de acesso - fornecida pela api publica: 
+
+    email: ,
+    password: 
+
+👓 
+ * [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
+ * Html/Css/js
+
+
+![login](https://github.com/itsmejunqueira/desafio-front-3/blob/master/src/assets/login.JPG)
+![Dashboard de vendas](https://github.com/itsmejunqueira/desafio-front-3/blob/master/src/assets/dashbboard.JPG)
+![Dashboard clientes](https://github.com/itsmejunqueira/desafio-front-3/blob/master/src/assets/clientes.JPG)
+![Modal cadastrar cliente](https://github.com/itsmejunqueira/desafio-front-3/blob/master/src/assets/Cadastro.JPG)
+
+
+📕Installation
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
